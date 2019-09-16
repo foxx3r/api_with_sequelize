@@ -1,5 +1,5 @@
 # api_with_sequelize
-I'm create an API with Sequelize and SQLite. I should you like it! :)
+I'm create an API with Sequelize and SQLite.
 
 To run the script, type:
 
