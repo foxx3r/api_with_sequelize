@@ -1,0 +1,20 @@
+{{#if posts}}
+  <h1>List  of posts: </h1>
+  <hr />
+  {{#each posts}}
+    <h3>{{name}}</h3>
+    <br />
+    <br />
+  {{/each}}
+  <img src="{{ avatar }}" alt="image.png">
+  {{#each posts}}
+    <br />
+    <small style="align-text: left">age: {{age}}<small>
+    <br />
+    <br />
+    <p>{{description}}</p>
+    <hr />
+  {{/each}}
+{{else}}
+  <h1>We don't have any posts yet :(</h1>
+{{/if}}
