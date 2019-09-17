@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require("body-parser")
 const handlebars = require("express-handlebars")
 const Post = require("../model/Post")
+const faker = require("faker")
 
 // config
 app.engine("handlebars", handlebars({ defaultLayout: "main" }))
@@ -16,7 +17,7 @@ app.use(express.static("public"))
 // routes
 app.get("/", (req, res, next) => {
   Post.findAll().then( (posts) => {
-    res.render("pages/home", { posts: posts })
+    res.render("pages/home", { posts: posts, avatar: faker.image.avatar() })
     })
 })
 
